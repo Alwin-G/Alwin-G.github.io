@@ -78,6 +78,12 @@ describe("All/", function(){
             expect(localStorageMock.profiles).toEqual([]);
         });
 
+        it("Shouldn't remove", function(){
+            localStorageMock.profiles = [{ id: "6666", name: "satan", password: "hell", age: "unknown", gender: "unknown"}];
+            profileData.deleteProfile();
+            expect(localStorageMock.profiles).toEqual([{ id: "6666", name: "satan", password: "hell", age: "unknown", gender: "unknown"}]);
+        });
+
         it("Should set the active user", function(){
             user.setUser(7777);
             expect(localStorageMock.currentUser).toBe(7777);

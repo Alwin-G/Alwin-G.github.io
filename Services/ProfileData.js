@@ -55,14 +55,17 @@ app.service("ProfileData", function(){
 
     this.deleteProfile = function(id) {
         var profiles = JSON.parse(localStorage.getItem("profiles"));
-        var counter;
+        var counter = -1;
 
         profiles.forEach(function(p, i) {
             if(p.id == id)
             { counter = i; }
         });
 
-        profiles.splice(counter, 1);
-        localStorage.setItem("profiles", JSON.stringify(profiles));
+        if(counter!=-1)
+        {
+            profiles.splice(counter, 1);
+            localStorage.setItem("profiles", JSON.stringify(profiles));
+        }
     }
 });
