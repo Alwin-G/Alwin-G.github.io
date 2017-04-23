@@ -1,6 +1,4 @@
 app.service("ChatData", function(){
-
-    this.createChat = function() { localStorage.setItem(); }
     
     var localChats = JSON.parse(localStorage.getItem("chat04"));
 
