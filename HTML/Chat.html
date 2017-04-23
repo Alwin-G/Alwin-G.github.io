@@ -5,14 +5,18 @@
     <body>
         <h1> Chat </h1> <br>
         <div id = "chatHolder">
-            <div id = "textHolderBuffer"> </div>
             <div id = "dataTable">
-                <table id = "form" style = "width: 100%">
-                    <tr>
-                        <td>  </td>
+                <table id = "chat">
+                    <tr ng-repeat="data in chat track by $index">
+                        <td width: 20px></td> <!--only a spacer-->
+                        <td class="first">{{data.message}}</td>
+                        <td class="second">{{data.prof}}</td>
+                        <td height: 10px></td> <!--creating some spece between messages-->
                     </tr>
                 </table>
             </div>
         </div>
+        <input id = "input" type = "text"  style="width:800px" ng-model = "newMessage"></input>
+        <button style = "margin-top: 20px" type = "reset" ng-click = "updateChat(newMessage)"> Send </button>
     </body>
 </html>
