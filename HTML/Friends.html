@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/stylesheet.css">
+    </head>
+
+    <body>
+        <div class="page">
+            <h1> Friends page </h1> <br>
+            
+            <div id = "textholder">
+                <div id = "textHolderBufferFriends"> </div>
+                <div id = "dataTable">
+                    <table id = "form" style = "width: 100%">
+                        <tr>
+                            <td> Name: </td>
+                            <td> Age: </td>
+                            <td> Gender: </td>
+                        </tr>
+                        <tr height = 20px></tr> <!--adds an empty row, discovered this myself and proud of it-->
+                        <tr ng-repeat="data in friends track by $index"> <!--only repeats the variable and leaves the header-->
+                            <td> {{data.name}} </td>
+                            <td> {{data.age}} </td>
+                            <td> {{data.gender}} </td>
+                            <td> <button type = "button" ng-click = "removeFriend(user, data.id)"> Delete friend </button> </td>
+                        </tr>
+                    </table>
+                    <button type = "button" ng-click = "updateFriends(friendList)"> Update </button>
+                    <button type = "button" ng-click = "addFriend(user, newFriend)">
+                        Add friend
+                    </button>
+                    <input type = "text" id = "id" ng-model = "newFriend"> <!-- requires friend id --> </input>
+                    <!-- i know this is ugly as hell and if i had the time i would obviously make it better -->
+                    <!-- for now however this gets me closer to the requirements for the app -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

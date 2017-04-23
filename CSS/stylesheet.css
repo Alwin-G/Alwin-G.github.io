@@ -1,0 +1,176 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #c2c3c4;
+}
+
+#page {
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    position: fixed;
+}
+
+a:link{ color: black; }
+
+a:visited{ color: black; }
+
+a.hidden{ color: transparent; }
+
+#header {
+    height: 75px;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#title {
+    height: 100%;
+    width: 80%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+}
+
+#logoPicture {
+    height: 100%;
+    width: 75px;
+    float: left;
+    display: inline-block;
+    background-color: #50f442;
+}
+
+#profileSpace{
+    height: 100%;
+    width: 75px;
+    float: right;
+    display: inline-block;
+    background-color: gray;
+}
+
+#profilePicture {
+    height: 100%;
+    width: 100%;
+    float: right;
+    display: inline-block;
+}
+
+table#navigation {
+    height: 3%;
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: gray;
+}
+
+table#form {
+    font-size: 80%;
+}
+
+#placeholder{
+    height: 84%;
+    width: 100%;
+    float: left;
+    background-color: #74b0ed;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#textHolder{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 200%;
+    float: left;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#chatHolder{
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 150%;
+    float: left;
+    display: inline-block;
+    position: relative;
+    border: 5px solid #286cff;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#textHolderBuffer{
+    height: 80%;
+    width: 30%;
+    float: left;
+    display: inline-block;
+}
+
+#textHolderBufferFriends{
+    height: 80%;
+    width: 20%;
+    float: left;
+    display: inline-block;
+}
+
+#loginBuffer{
+    height: 20px;
+    width: 70%;
+    float: left;
+    display: inline-block;
+}
+
+#dataTable{
+    height: auto;
+    width: 70%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button{
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 50%;
+}
+
+footer {
+    height: 4%;
+    width: 100%;
+    float: left;
+    background-color: gray;
+    text-align: center;
+    position: relative;
+}
+
+#errorPanel{
+    height: auto;
+    width: auto;
+    color: red;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 80%;
+    float:left;
+}

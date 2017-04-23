@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/stylesheet.css">
+    </head>
+
+    <body>
+        <div class = "page">
+            <h1> CreateUserView </h1> <br>
+
+            <div id = "textHolder">
+                <div id = "textHolderBuffer"></div>
+                <div id = "dataTable">
+                    <table id = "form" style = "width: 70%">
+                        <tr>
+                            <td style="width: 200px;"> Username: </td>
+                            <td> <input type = "text" ng-model = "profile.name" id = "name"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px;"> password: </td>
+                            <td> <input type = "text" ng-model = "profile.password"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px;"> Age: </td>
+                            <td> <input type = "text" ng-model = "profile.age"> </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 200px;"> Gender: </td>
+                            <td> <input type = "text" ng-model = "profile.gender"> </td>
+                        </tr>
+                    </table>
+                </div>
+                <button type = "button" id = "button" ng-click = "newUser()">
+                    Create Account
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

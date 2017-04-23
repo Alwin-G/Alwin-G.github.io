@@ -1,0 +1,67 @@
+<html ng-app = "myApp">
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="CSS/stylesheet.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.js"></script>
+        <script src="Libraries/angular-route.js"></script>
+        <link rel="shortcut icon" href="">
+        <!--The line below prevents the site from going to favicon for no damn reason-->
+        <intercept-url pattern="/favicon.ico" access="ROLE_ANONYMOUS"/>
+    </head>
+
+    <body ng-app = "myApp">
+        <div id = "page">
+            <div id = "header">
+                <img id = "logoPicture" alt = "logo" src = "Images/I'mBatman.png">
+                <div id = "title">
+                    <h1> I'm BATMAN.org </h1>
+                </div>
+                <div id = "profileSpace">
+                    <!-- Definition of this is done in window.onload() -->
+                </div>
+                <a class="hidden" href="#!/Hidden"> a </a>
+            </div>
+
+            <table id = "navigation">
+                <tr>
+                    <th> <a href="#!/Home">      Home      </a></th> 
+                    <th> <a href="#!/Chat">      Chat      </a></th>
+                    <th> <a href="#!/Friends">   Friends   </a></th>
+                    <th> <a href="#!/Login">     Login     </a></th>
+                </tr>
+            </table>
+
+            <div id = "placeholder">
+                <div class ="container" ng-view> </div>
+                <!-- The js handling routing within the app -->
+                <script src="Route.js"></script>
+                <!-- A summary of used controllers -->
+                <script src="Controllers/HomeController.js"></script>
+                <script src="Controllers/ChatController.js"></script>
+                <script src="Controllers/FriendsController.js"></script>
+                <script src="Controllers/ProfileController.js"></script>
+                <script src="Controllers/LoginController.js"></script>
+                <script src="Controllers/CreateUserController.js"></script>
+                <!-- A summary of used custom filters -->
+                <script src="Filters/MainFilter.js"></script>
+                <!-- A summary of used services -->
+                <script src="Services/UserService.js"></script>
+                <script src="Services/ProfileData.js"></script>
+                <script src="Services/FriendData.js"></script>
+                <script src="Services/ChatData.js"></script>
+            </div>
+            
+            <footer> </footer>
+        </div>
+
+        <script>
+            window.onload = function()  //made this because i wanted to use if for altering profile pic on login
+            {                           //it turned out to be a pain to use the UserService here
+                document.getElementById("profileSpace").innerHTML = "" +
+                "<a href='#!/Profile'>" +
+                "<img id = 'profilePicture' alt = 'profile' src = 'Images/SurpricedBatman.jpg'>" +
+                "</a>"
+            }
+        </script>
+    </body>
+</html>

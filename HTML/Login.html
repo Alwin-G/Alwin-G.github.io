@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="CSS/stylesheet.css">
+    </head>
+
+    <body>
+        <div class="page">
+            <h1> Login </h1> <br>
+            <div id = "textHolder">
+                <div id = "textHolderBuffer"> </div>
+                <div id = "loginBuffer"> </div>
+                <table id = "form"  >
+                    <th>
+                        <td>  </td>
+                    </th>
+                    <tr>
+                        <td>Username:</td>
+                        <td>
+                            <input type = "text" id = "name" ng-model = "name" size="45">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input type = "password" id = "password" ng-model = "password" size="45">
+                        </td>
+                    </tr>
+                </table>
+                <div id = "loginBuffer"> </div>
+                <button type = "button" id = "loginbutton" ng-click = "checkUser(name, password)">
+                    Login
+                </button>
+                <button type = "button" ng-click = "createUser()" ng-show = "!user.createNew">
+                    New user
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
